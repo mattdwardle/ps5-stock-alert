@@ -16,3 +16,4 @@ TWILIO_AUTH_TOKEN=
 TWILIO_PHONE_FROM=
 TWILIO_PHONE_TO=
 ```
+For Heroku you need to set `heroku buildpacks:set https://github.com/mxschmitt/heroku-playwright-buildpack.git -a my-app` before playwright will load.
