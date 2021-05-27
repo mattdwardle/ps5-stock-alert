@@ -24,3 +24,6 @@ or maybe `heroku buildpacks:set https://github.com/jontewks/puppeteer-heroku-bui
 
 
 `heroku buildpacks:add jontewks/puppeteer -a my-app`
+
+
+`heroku buildpacks:set https://github.com/heroku/nodejs-yarn-buildpack.git -a wardle-stock-alert`
