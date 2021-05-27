@@ -25,7 +25,7 @@ const handleStockAvailability = async (
     path: `screenshots/screenshot-${formatISO(new Date())}.png`,
   });
   await sendMessage(link);
-  await playSiren();
+  // await playSiren();
 };
 
 export const checkPages = async () => {
@@ -69,21 +69,21 @@ export const checkPages = async () => {
       );
     }
 
-    if (link.type === LinkType.CYBERPORT) {
-      const title = await page.textContent(
-        '[title="Mehr Informationen zum Produkt"]'
-      );
-      await handleStockAvailability(
-        link,
-        title.includes("Sony PlayStation 5"),
-        page
-      );
-    }
+    // if (link.type === LinkType.CYBERPORT) {
+    //   const title = await page.textContent(
+    //     '[title="Mehr Informationen zum Produkt"]'
+    //   );
+    //   await handleStockAvailability(
+    //     link,
+    //     title.includes("Sony PlayStation 5"),
+    //     page
+    //   );
+    // }
 
-    if (link.type === LinkType.GAMESTOP) {
-      const sorryTitle = await page.$('text="Sorry, PS5-Fans."');
-      await handleStockAvailability(link, !sorryTitle, page);
-    }
+    // if (link.type === LinkType.GAMESTOP) {
+    //   const sorryTitle = await page.$('text="Sorry, PS5-Fans."');
+    //   await handleStockAvailability(link, !sorryTitle, page);
+    // }
 
     if (link.type === LinkType.EURONICS) {
       const addToCartButton = await page.$("#buybox--button");
