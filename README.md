@@ -20,10 +20,4 @@ For Heroku you need to set `heroku buildpacks:set https://github.com/mxschmitt/h
 
 
 
-or maybe `heroku buildpacks:set https://github.com/jontewks/puppeteer-heroku-buildpack -a my-app`
-
-
-`heroku buildpacks:add jontewks/puppeteer -a my-app`
-
-
-`heroku buildpacks:set https://github.com/heroku/nodejs-yarn-buildpack.git -a wardle-stock-alert`
+or maybe `heroku buildpacks:add https://github.com/jontewks/puppeteer-heroku-buildpack -a my-app`
